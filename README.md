@@ -12,7 +12,7 @@ It is a simple project to consume Application Insights REST API
 
 ## Prerequisites
 * [Azure Application Insights](https://dev.applicationinsights.io/reference) The Application Insights REST API lets you query the performance and usage data that Application Insights records about your app.
-    It's necessary to change the attributes 'appId' and 'appKey' in the file environment.ts
+    It's necessary to change the attributes **'appId'** and **'appKey'** in the file environment.ts
 
 ## Development server
 
