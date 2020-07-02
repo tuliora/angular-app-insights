@@ -2,7 +2,7 @@
 
 It is a simple project to consume Application Insights REST API
 
-![](src/assets/img/img1.png)
+![](src/assets/img/img1.png "Home Page")
 
 ## Built With
 
