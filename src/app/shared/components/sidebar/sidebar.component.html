@@ -1,0 +1,30 @@
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse bg-white">
+  <div class="position-sticky pt-3">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/home" routerLinkActive="active">
+          <fa-icon [icon]="['fas', 'home']"></fa-icon>
+          <span>{{ 'sidebar.home' | translate }}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/metrics" routerLinkActive="active">
+          <fa-icon [icon]="['fas', 'chart-line']"></fa-icon>
+          <span>{{ 'sidebar.metrics' | translate }}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/events" routerLinkActive="active">
+          <fa-icon [icon]="['fas', 'calendar']"></fa-icon>
+          <span>{{ 'sidebar.events' | translate }}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/query" routerLinkActive="active">
+          <fa-icon [icon]="['fas', 'search']"></fa-icon>
+          <span>{{ 'sidebar.query' | translate }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

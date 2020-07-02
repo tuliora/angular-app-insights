@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h3>Events</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <form class="row g-3" [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+          <div class="col-4">
+            <label for="inputEvent" class="form-label">{{ 'events.eventType' | translate}}</label>
+            <select id="inputEvent" class="form-select" formControlName="event" class="form-control"
+                    required [ngClass]="{ 'is-invalid': (f.event.dirty || f.event.touched) && f.event.errors }">
+              <option [ngValue]="null">{{ 'actions.choose' | translate}}...</option>
+              <option *ngFor="let item of typeEvents" [ngValue]="item">{{item}}</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="inputTimespan" class="form-label">{{ 'events.timespan' | translate}}</label>
+            <input formControlName="timespan" type="text" class="form-control" id="inputTimespan" placeholder="{{ 'events.placeholder.timespan' | translate }}">
+          </div>
+
+          <div class="col-12 text-right">
+            <button type="submit" class="btn btn-primary text-white">{{ 'actions.search' | translate}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5" *ngIf="result">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <textarea id="result" cols="30" rows="10">{{result}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+

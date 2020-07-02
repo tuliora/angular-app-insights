@@ -1,0 +1,40 @@
+.modal-alert-danger {
+    .modal-header {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    fa-icon {
+        color: #dc3545;
+    }
+}
+
+.modal-alert-warning {
+    .modal-header {
+        background-color: #ffc107;
+        color: white;
+    }
+
+    fa-icon {
+        color: #ffc107;
+    }
+}
+
+.modal-alert-success {
+    .modal-header {
+        background-color: #28a745;
+        color: white;
+    }
+
+    fa-icon {
+        color: #28a745;
+    }
+}
+
+.close {
+    opacity: unset!important;
+
+    span {
+        color: #fff;
+    }
+}

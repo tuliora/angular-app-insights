@@ -1,9 +1,14 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+// public api format https://api.applicationinsights.io/{api-version}/{app-id}
+
+const appId = '00000000-0000-0000-0000-000000000000';
 
 export const environment = {
-  production: false
+  production: true,
+  apiKey: '0000000000000000000000000000000000000000',
+  api: 'https://api.applicationinsights.io/v1/apps/' + appId,
 };
 
 /*

@@ -1,0 +1,48 @@
+{
+  "actions": {
+    "search": "Search",
+    "choose": "Choose"
+  },
+  "sidebar": {
+    "home": "Home",
+    "metrics": "Metrics",
+    "events": "Events",
+    "query": "Query"
+  },
+  "home": {
+    "title": "Home",
+    "numberRequests": "Number of requests",
+    "numberFailedRequests": "Number of failed requests",
+    "avgServerResponse": "Average server response"
+  },
+  "metrics": {
+    "title": "Metrics",
+    "metricId": "Metric ID",
+    "timespan": "Timespan",
+    "interval": "Interval",
+    "aggregation": "Aggregation",
+    "start": "Start",
+    "end": "End",
+    "result": "Result",
+    "placeholder": {
+      "timespan": "default: PT12H (last 12 hours)"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "eventType": "Event type",
+    "timespan": "Timespan",
+    "placeholder": {
+      "timespan": "default: PT12H (last 12 hours)"
+    }
+  },
+  "query": {
+    "title": "Query",
+    "timespan": "Timespan",
+    "query": "Query",
+    "placeholder": {
+      "timespan": "default: PT12H (last 12 hours)",
+      "query": "enter an Analytics query, e.g. \"requests | limit 10\""
+    }
+  }
+}

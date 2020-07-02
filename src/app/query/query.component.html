@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h3>{{ 'query.title' | translate}}</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <form class="row g-3" [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+          <div class="col-md-4">
+            <label for="inputTimespan" class="form-label">{{ 'query.timespan' | translate}}</label>
+            <input formControlName="timespan" type="text" class="form-control" id="inputTimespan" placeholder="{{ 'query.placeholder.timespan' | translate }}">
+          </div>
+          <div class="col-4">
+            <label for="inputQuery" class="form-label">Query</label>
+            <textarea formControlName="query" class="form-control" id="inputQuery" cols="30" rows="5"
+                      placeholder="{{ 'query.placeholder.query' | translate}}"
+                      required [ngClass]="{ 'is-invalid': (f.query.dirty || f.query.touched) && f.query.errors }">
+            </textarea>
+
+            <div *ngIf="(f.query.dirty || f.query.touched) && f.query.errors" class="invalid-feedback">
+              <div *ngIf="f.query.errors.required">Query is required</div>
+            </div>
+          </div>
+
+          <div class="col-12 text-right">
+            <button type="submit" class="btn btn-primary text-white">{{ 'actions.search' | translate}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5" *ngIf="result">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <textarea id="result" cols="30" rows="10">{{result}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+

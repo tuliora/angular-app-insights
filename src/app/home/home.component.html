@@ -1,0 +1,90 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h3>{{ 'home.title' | translate }}</h3>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body pb-0">
+        <div class="row">
+          <div class="col-3">
+            <fa-icon [icon]="['fas', 'calculator']" size="3x" class="text-primary"></fa-icon>
+          </div>
+          <div class="col-9">
+            <div class="numbers">
+              <p class="h6 text-muted">{{ 'home.numberRequests' | translate }}</p>
+              <p class="h5">{{requestCount.sum}} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer border-top-0 bg-white pt-0">
+        <hr>
+        <div class="font-weight-light">
+          <fa-icon [icon]="['fas', 'clock']" class="text-secondary"></fa-icon>
+          {{requestCount.start}} - {{requestCount.end}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card">
+      <div class="card-body pb-0">
+        <div class="row">
+          <div class="col-3">
+            <fa-icon [icon]="['fas', 'exclamation-triangle']" size="3x" class="text-danger"></fa-icon>
+          </div>
+          <div class="col-9">
+            <div class="numbers">
+              <p class="h6 text-muted">{{ 'home.numberFailedRequests' | translate }}</p>
+              <p class="h5">{{requestFailed.sum}} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer border-top-0 bg-white pt-0">
+        <hr>
+        <div class="font-weight-light">
+          <fa-icon [icon]="['fas', 'clock']" class="text-secondary"></fa-icon>
+          {{requestFailed.start}} - {{requestFailed.end}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="card">
+      <div class="card-body pb-0">
+        <div class="row">
+          <div class="col-3">
+            <fa-icon [icon]="['fas', 'balance-scale']" size="3x" class="text-success"></fa-icon>
+          </div>
+          <div class="col-9">
+            <div class="numbers">
+              <p class="h6 text-muted">{{ 'home.avgServerResponse' | translate }}</p>
+              <p class="h5">{{avgServerResp.avg}}ms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer border-top-0 bg-white pt-0">
+        <hr>
+        <div class="font-weight-light">
+          <fa-icon [icon]="['fas', 'clock']" class="text-secondary"></fa-icon>
+          {{avgServerResp.start}} - {{avgServerResp.end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <app-chart-line class="my-4 w-100" width="900" height="380" [data]="usersCountData"></app-chart-line>
+      </div>
+    </div>
+  </div>
+</div>

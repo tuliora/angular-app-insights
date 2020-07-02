@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h3>{{ 'metrics.title' | translate}}</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <form class="row g-3" [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+          <div class="col-3">
+            <label for="inputMetricID" class="form-label">{{ 'metrics.metricId' | translate}}</label>
+            <select id="inputMetricID" class="form-select" formControlName="metric" class="form-control"
+                    required [ngClass]="{ 'is-invalid': (f.metric.dirty || f.metric.touched) && f.metric.errors }">
+              <option [ngValue]="null">{{ 'actions.choose' | translate}}...</option>
+              <option *ngFor="let item of metadataMetrics | keyvalue" [ngValue]="item.key">{{item.key}}</option>
+            </select>
+
+            <div *ngIf="(f.metric.dirty || f.metric.touched) && f.metric.errors" class="invalid-feedback">
+              <div *ngIf="f.metric.errors.required">Metric ID is required</div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="inputTimespan" class="form-label">{{ 'metrics.timespan' | translate}}</label>
+            <input formControlName="timespan" type="text" class="form-control" id="inputTimespan" placeholder="{{ 'metrics.placeholder.timespan' | translate }}">
+          </div>
+          <div class="col-3">
+            <label for="inputInterval" class="form-label">{{ 'metrics.interval' | translate}}</label>
+            <input formControlName="interval" type="text" class="form-control" id="inputInterval">
+          </div>
+          <div class="col-3">
+            <label for="inputAggregation" class="form-label">{{ 'metrics.aggregation' | translate}}</label>
+            <input formControlName="aggregation" type="text" class="form-control" id="inputAggregation" placeholder="default: (varies by metric ID)">
+          </div>
+
+          <div class="col-12 text-right">
+            <button type="submit" class="btn btn-primary text-white">{{ 'actions.search' | translate}}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5" *ngIf="showResult">
+  <div class="col-md-12">
+    <div class="card bg-white">
+      <div class="card-body">
+        <p class="card-text"><b>{{ 'metrics.start' | translate}}: </b>{{result.start}}</p>
+        <p class="card-text"><b>{{ 'metrics.end' | translate}}: </b>{{result.end}}</p>
+        <p class="card-text" *ngIf="result.value">
+          <b>{{ 'metrics.result' | translate}}: </b>{{result.value}}
+        </p>
+        <app-chart-line class="my-4 w-100" width="900" height="380"
+                        *ngIf="result.segments" [data]="result.segments">
+        </app-chart-line>
+      </div>
+    </div>
+  </div>
+</div>
+
+

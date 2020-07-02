@@ -1,0 +1,48 @@
+{
+  "actions": {
+    "search": "Pesquisar",
+    "choose": "Selecione"
+  },
+  "sidebar": {
+    "home": "Home",
+    "metrics": "Métricas",
+    "events": "Eventos",
+    "query": "Consulta"
+  },
+  "home": {
+    "title": "Home",
+    "numberRequests": "Número de requisições",
+    "numberFailedRequests": "Número de requisições com erro",
+    "avgServerResponse": "Média de resposta do servidor"
+  },
+  "metrics": {
+    "title": "Métricas",
+    "metricId": "Métrica ID",
+    "timespan": "Intervalo de tempo",
+    "interval": "Intervalo",
+    "aggregation": "Agregação",
+    "start": "Início",
+    "end": "Fim",
+    "result": "Resultado",
+    "placeholder": {
+      "timespan": "padrão: PT12H (últimas 12 horas)"
+    }
+  },
+  "events": {
+    "title": "Eventos",
+    "eventType": "Tipo evento",
+    "timespan": "Intervalo de tempo",
+    "placeholder": {
+      "timespan": "padrão: PT12H (últimas 12 horas)"
+    }
+  },
+  "query": {
+    "title": "Consulta",
+    "timespan": "Intervalo de tempo",
+    "query": "Consulta",
+    "placeholder": {
+      "timespan": "padrão: PT12H (últimas 12 horas)",
+      "query": "insira uma consulta do Analytics, por exemplo \"pedidos | limite 10\""
+    }
+  }
+}
