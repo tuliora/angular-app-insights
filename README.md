@@ -2,7 +2,7 @@
 
 It is a simple project to consume Application Insights REST API
 
-![AppInsights](assets/img/img1.png "Example")
+![](src/assets/img/img1.png)
 
 ## Built With
 
