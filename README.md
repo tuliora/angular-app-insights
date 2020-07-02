@@ -2,6 +2,8 @@
 
 It is a simple project to consume Application Insights REST API
 
+![AppInsights](assets/img/img1.png "Example")
+
 ## Built With
 
 * [Angular CLI](https://github.com/angular/angular-cli) Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps (10.0.0)
