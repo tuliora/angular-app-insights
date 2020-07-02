@@ -1,6 +1,16 @@
 # AppInsights
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+It is a simple project to consume Application Insights REST API
+
+## Built With
+
+* [Angular CLI](https://github.com/angular/angular-cli) Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps (10.0.0)
+* [Bootstrap](https://v5.getbootstrap.com/) - Bootstrap is an open source toolkit for developing with HTML, CSS, and JS (5.0.0-alpha1)
+* [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting for designers & developers
+
+## Prerequisites
+* [Azure Application Insights](https://dev.applicationinsights.io/reference) The Application Insights REST API lets you query the performance and usage data that Application Insights records about your app.
+    It's necessary to change the attributes 'appId' and 'appKey' in the file environment.ts
 
 ## Development server
 
@@ -27,5 +37,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
+## Contributing
 
-https://dev.applicationinsights.io/reference
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
